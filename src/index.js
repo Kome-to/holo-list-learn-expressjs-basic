@@ -27,7 +27,8 @@ route(app);
 
 const object = {
     a: 1,
-    b: 3
+    b: 3,
+    c: 4
 };
 
 app.listen(port, () => {
