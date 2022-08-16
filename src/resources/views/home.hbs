@@ -1,1 +1,20 @@
-<h1> Hello world </h1>
+<div class="mt-4 container">
+    <div class="row">
+        
+        {{#each members}}
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-css" >
+                <a href="/member/{{this.slug}}"><img src="https://img.youtube.com/vi/pFgUluV_00s/maxresdefault.jpg" class="card-img-top" alt="image"></a>
+                <div class="card-body">
+                <a href="/member/{{this.slug}}"><h5 class="card-title">{{this.talent}}</h5></a>
+                <p class="card-text">Gen: {{this.gen}}</p>
+                <p class="card-text">Sub: {{this.sub}}</p>
+                <a href="#" class="btn btn-primary">Show</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+
+    </div>
+</div>

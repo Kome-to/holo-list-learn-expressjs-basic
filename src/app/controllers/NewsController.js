@@ -1,7 +1,13 @@
+const Member = require('../models/Members');
+
 class NewsController {
     //[GET] /news
-    index(req, res) {
-        res.render('news');
+    index(req, res, next) {
+        Member.findOne({ talent: 'Minato Aqua' })
+            .then((member) => {
+                res.json(member);
+            })
+            .catch(next);
     }
 
     //[GET] /news/anime
